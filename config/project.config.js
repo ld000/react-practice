@@ -53,6 +53,18 @@ const config = {
   ],
 
   // ----------------------------------
+  // DataBase Configuration
+  // ----------------------------------
+  mysql_config: {
+    connectionLimit : 20,
+    host: '192.168.130.64',
+    port: '3306',
+    user: 'root',
+    password: 'root',
+    database: 'k2bigdata_demo_feb'
+  },
+
+  // ----------------------------------
   // Test Configuration
   // ----------------------------------
   coverage_reporters : [

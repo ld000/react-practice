@@ -1,13 +1,13 @@
 import React, { PropTypes } from 'react'
-import moment from 'moment'
 
-class Footer extends React.Component {
+class Profile extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
       username: '',
-      address: ''
+      address: '',
+      imageAddress: ''
     }
   }
 
@@ -20,6 +20,7 @@ class Footer extends React.Component {
       response.json().then(json => {
         this.setState({
           user: json.user,
+          imageAddress: json.imageAddress,
           address: json.address
         });
       });
@@ -28,15 +29,12 @@ class Footer extends React.Component {
 
   render () {
     return (
-      <footer {...this.props} className="footer">
-        ©&nbsp;{moment().format('YYYY')}
-        &nbsp;-&nbsp;{this.state.user}
-        &nbsp;-&nbsp;<a href="/">{this.state.address}</a>
-        <br />
-        Powered by <a target="_blank" href="http://www.expressjs.com.cn">Express</a>
-      </footer>
+      <div className="profile">
+        <a href="/"><img src={this.state.imageAddress} alt={this.state.user} /></a>
+        <span>{this.state.user}</span>
+      </div>
     );
   }
 }
 
-export default Footer;
+export default Profile;

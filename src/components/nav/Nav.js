@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react'
-import moment from 'moment'
+import MenuList from './MenuList'
+import Profile from './Profile'
 
-class Footer extends React.Component {
+class Nav extends React.Component {
   constructor(props) {
     super(props)
 
@@ -28,15 +29,15 @@ class Footer extends React.Component {
 
   render () {
     return (
-      <footer {...this.props} className="footer">
-        ©&nbsp;{moment().format('YYYY')}
-        &nbsp;-&nbsp;{this.state.user}
-        &nbsp;-&nbsp;<a href="/">{this.state.address}</a>
-        <br />
-        Powered by <a target="_blank" href="http://www.expressjs.com.cn">Express</a>
-      </footer>
+      <nav className="sidebar">
+        <div className="wrap">
+          <Profile />
+          <MenuList />
+          <ul></ul>
+        </div>
+      </nav>
     );
   }
 }
 
-export default Footer;
+export default Nav;

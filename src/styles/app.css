@@ -1,0 +1,73 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #666;
+}
+
+.header {
+  /*position: fixed;*/
+  background: #fff;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  padding: 0;
+  height: 56px;
+  border-bottom: 1px solid #ddd;
+}
+
+.content-area {
+  /*background-color: #f1f1f1;*/
+  position: relative;
+  height: 500px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.top-picture {
+  background: #45e8c5 url(/outage-status-update.png) no-repeat center bottom;
+  background-size: 562px 315px;
+  position: relative;
+  text-align: center;
+}
+
+.top-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1140px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.top-name {
+  padding: 3.5em 0 21em;
+}
+
+.post-preview {
+  margin-bottom: 8rem;
+}
+
+.post-preview .continue {
+  text-align: center;
+}
+
+.footer {
+  line-height: 1.8;
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #fff;
+  font-size: .9em;
+}
+
+.footer a, a:hover {
+  color: #2479CC;
+  text-decoration: none;
+}

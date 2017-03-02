@@ -1,7 +1,10 @@
 module.exports = (app) => {
 
   app.get('/api/blog', (req, res) => {
-    var blogs = ['a', 'b'];
+    var blogs = [
+      {title: 'test1', createTime: '2017-01-01', content: '# Marked in browser\n\nRendered by **marked**.'},
+      {title: 'test2', createTime: '2017-01-01', content: 'Test content placeholder'}
+    ];
     res.json(blogs);
   });
 

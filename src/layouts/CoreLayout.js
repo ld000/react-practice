@@ -5,19 +5,13 @@ import Footer from '../components/Footer'
 import Section from '../components/Section'
 // import './CoreLayout.scss'
 // import '../../styles/core.scss'
-import '../styles/main.css'
+import '../styles/app.css'
 
 export const CoreLayout = ({ children }) => (
-  <div className='container text-center'>
+  <div>
     <Header />
-    <Nav />
-    <div className="main">
-      <Section />
-      <Footer />
-    </div>
-    <div className='core-layout__viewport'>
-      {children}
-    </div>
+    {children}
+    <Footer />
   </div>
 )
 
